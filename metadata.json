@@ -1,0 +1,9 @@
+{
+  "uuid": "gnotes@com.ericktucto",
+  "name": "Gnotes",
+  "description": "Notes to Gnome Shell",
+  "url": "https://ericktucto.github.io/gnotes",
+  "shell-version": [ "3.28" ],
+  "settings-schema": "com.ericktucto.gnotes",
+  "version": 1.0
+}
