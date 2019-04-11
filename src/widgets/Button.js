@@ -19,6 +19,9 @@ class Button extends PanelMenu.Button {
     addNote(note) {
         this.menu.addMenuItem(new Note(note), 0)
     }
+    destroy() {
+        super.destroy()
+    }
 }
 
 exports.Button = Button
