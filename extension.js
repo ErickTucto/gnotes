@@ -3,13 +3,13 @@ const require = Me.imports.require.require
 const Extension = require('./src/index')
 
 function init() {
-    Extension.init()
+  Extension.init()
 }
 
 function enable() {
-    Extension.enable()
+  Extension.enable()
 }
 
 function disable() {
-    Extension.disable()
+  Extension.disable()
 }
