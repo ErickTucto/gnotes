@@ -1,3 +1,4 @@
+const { require } = imports.misc.extensionUtils.getCurrentExtension().imports.require
 const PanelMenu = imports.ui.panelMenu
 const PopupMenu = imports.ui.popupMenu
 const St = imports.gi.St
@@ -5,7 +6,7 @@ const Clutter = imports.gi.Clutter
 const { ButtonAdd } = require('./src/widgets/ButtonAdd')
 const { Note } = require('./src/widgets/Note')
 
-class Button extends PanelMenu.Button {
+var Button = class extends PanelMenu.Button {
   constructor() {
     super(0.0, "Notas para Gnome")
     let box = new St.BoxLayout();
@@ -23,5 +24,3 @@ class Button extends PanelMenu.Button {
     super.destroy()
   }
 }
-
-exports.Button = Button

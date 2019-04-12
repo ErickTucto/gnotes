@@ -1,7 +1,7 @@
 const PopupMenu = imports.ui.popupMenu
 const St = imports.gi.St
 
-class Note extends PopupMenu.PopupBaseMenuItem {
+var Note = class extends PopupMenu.PopupBaseMenuItem {
   constructor(note) {
     super()
 
@@ -10,5 +10,3 @@ class Note extends PopupMenu.PopupBaseMenuItem {
     this.actor.label_actor = this.label
   }
 }
-
-exports.Note = Note

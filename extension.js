@@ -1,5 +1,4 @@
-const Me = imports.misc.extensionUtils.getCurrentExtension()
-const require = Me.imports.require.require
+const require = imports.misc.extensionUtils.getCurrentExtension().imports.require.require
 const Extension = require('./src/index')
 
 function init() {

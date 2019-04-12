@@ -1,12 +1,13 @@
+const { require } = imports.misc.extensionUtils.getCurrentExtension().imports.require
 const { Button } = require('./src/widgets/Button')
 const { exists, create_file, open_file, file_contents, write_file } = require('./src/helpers')
-const Main = imports.ui.main
+const Main = require('ui/main')
 const DB = 'gnotes.json'
 
 let app
 let gnotes
 
-exports.init = () => {
+var init = () => {
   log("Gnote: Init")
   if (!exists(DB)) {
     create_file(DB)
@@ -14,7 +15,7 @@ exports.init = () => {
   }
 }
 
-exports.enable = () => {
+var enable = () => {
   log("Gnote: Enable")
   gnotes = JSON.parse(file_contents(DB))
   app = new Button()
@@ -26,7 +27,7 @@ exports.enable = () => {
   Main.panel.addToStatusArea('g-notes', app)
 }
 
-exports.disable = () => {
+var disable = () => {
   log("Gnote: Disable")
   app.destroy()
   app = undefined

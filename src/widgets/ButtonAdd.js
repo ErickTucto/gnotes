@@ -2,8 +2,7 @@ const PopupMenu = imports.ui.popupMenu
 const St = imports.gi.St
 const Clutter = imports.gi.Clutter
 
-
-class ButtonAdd extends PopupMenu.PopupBaseMenuItem  {
+var ButtonAdd = class extends PopupMenu.PopupBaseMenuItem  {
   constructor() {
     super({ reactive: false })
     let button = new St.Button({
@@ -20,5 +19,3 @@ class ButtonAdd extends PopupMenu.PopupBaseMenuItem  {
     //
   }
 }
-
-exports.ButtonAdd = ButtonAdd
