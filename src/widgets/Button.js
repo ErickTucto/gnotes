@@ -15,7 +15,9 @@ var Button = class extends PanelMenu.Button {
     this.actor.add_child(box)
 
     this.menu.addMenuItem(new PopupMenu.PopupSeparatorMenuItem())
-    this.menu.addMenuItem(new ButtonAdd)
+    let buttonAdd = new ButtonAdd
+    this.menu.addMenuItem(buttonAdd)
+    buttonAdd.connect('show-modal', () => { this.menu.close() })
   }
   addNote(note) {
     this.menu.addMenuItem(new Note(note), 0)
